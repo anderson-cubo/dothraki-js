@@ -2,13 +2,19 @@
   "name": "dothraki-js",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.5"
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "@otris/jsdoc-tsd": "^0.8.6",
+    "babel-loader": "^8.0.0-beta.0",
+    "lodash": "^4.17.5",
+    "webpack": "^3.11.0"
   }
 }

@@ -27,7 +27,7 @@ const translate = function (getWord, strs, ...params) {
 /**
  * Run dothraki to find translation
  * @param {array} allParams - Params to execute translation
- * @returns {(string|function)} If you send a template equivalent it will return the translation or it will return a function that receives the template. 
+ * @returns {(string|function)} If you send a template equivalent it will return the translation or it will return a function that receives the template.
 */
 const execute = function (...allParams) {
   const language = isArray(allParams[0]) ? settings.get('language') : allParams[0]
