@@ -1,6 +1,6 @@
 import * as settings from './src/settings'
-import * as Dothraki from './src/index'
+import dothraki from './src/index'
 
-export { settings }
+export { settings, dothraki }
 
-export default Dothraki
+export default dothraki
