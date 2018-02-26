@@ -8,6 +8,7 @@ let config = {
 
 let dictionaryWithoutTranslation = {}
 
+export const getDictionaryWithoutTranslation = () => dictionaryWithoutTranslation
 /**
  * Create a dictionary for a language
  * @param {string} lang Language of the dictionary.
