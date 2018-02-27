@@ -22,12 +22,14 @@ const translate = function (getWord, strs, ...params) {
   const dictionaryWordTemplate = dictionaryWord.join(' ').trim()
   const word = getWord(dictionaryWordTemplate) || dictionaryWordTemplate
 
-  if (settings.get('use_array_to_render') && word.match(regx2)) {
+  if (settings.get('use_array_to_render') && word.test(regx2)) {
     const value = word.split(regx)
     return map(value, function (e) {
-      return e.replace(regx2, (a, b, c, d) => {
-        return params[c]
-      })
+      const match = regx2.exec(e)
+      if (match) {
+        return params[match[match.lengh - 1]]
+      }
+      return e
     })
   }
 
