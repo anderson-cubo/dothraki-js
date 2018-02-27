@@ -26,7 +26,7 @@ const translate = function (getWord, strs, ...params) {
     const value = (word || dictionaryWordTemplate).split(regx)
     // @TODO USE ARRAY TO RETURN
     return map(value, function (e) {
-      return value.replace(regx2, (a, b, c, d) => {
+      return e.replace(regx2, (a, b, c, d) => {
         return params[c]
       })
     })
