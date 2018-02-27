@@ -1,5 +1,6 @@
 let config = {
   language: 'PT_BR',
+  use_array_to_render: true,
   _ENABLE_WARNINGS: true,
   dictionaries: {
     PT_BR: {}

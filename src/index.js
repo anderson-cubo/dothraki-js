@@ -1,6 +1,10 @@
 import isArray from 'lodash/isArray'
+import map from 'lodash/map'
 
 import * as settings from './settings'
+
+const regx = /(\{\{[\d]*[\d]\}\})/g
+const regx2 = /(\{\{([\d]*[\d])\}\})/g
 
 /**
  * Search at dictionary and translate it.
@@ -18,10 +22,20 @@ const translate = function (getWord, strs, ...params) {
   const dictionaryWordTemplate = dictionaryWord.join(' ').trim()
   const word = getWord(dictionaryWordTemplate)
 
-  return (word || dictionaryWordTemplate)
-    .replace(/(\{\{([\d]*[\d])\}\})/g, (a, b, c, d) => {
-      return params[c]
+  if (settings.get('use_array_to_render')) {
+    const value = (word || dictionaryWordTemplate).split(regx)
+    // @TODO USE ARRAY TO RETURN
+    return map(value, function (e) {
+      return value.replace(regx2, (a, b, c, d) => {
+        return params[c]
+      })
     })
+  }
+
+  return (word || dictionaryWordTemplate)
+  .replace(regx2, (a, b, c, d) => {
+    return params[c]
+  })
 }
 
 /**
