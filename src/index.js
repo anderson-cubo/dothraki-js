@@ -20,11 +20,10 @@ const translate = function (getWord, strs, ...params) {
   })
 
   const dictionaryWordTemplate = dictionaryWord.join(' ').trim()
-  const word = getWord(dictionaryWordTemplate)
+  const word = getWord(dictionaryWordTemplate) || dictionaryWordTemplate
 
-  if (settings.get('use_array_to_render')) {
-    const value = (word || dictionaryWordTemplate).split(regx)
-    // @TODO USE ARRAY TO RETURN
+  if (settings.get('use_array_to_render') && word.match(regx2)) {
+    const value = word.split(regx)
     return map(value, function (e) {
       return e.replace(regx2, (a, b, c, d) => {
         return params[c]
@@ -32,8 +31,7 @@ const translate = function (getWord, strs, ...params) {
     })
   }
 
-  return (word || dictionaryWordTemplate)
-  .replace(regx2, (a, b, c, d) => {
+  return word.replace(regx2, (a, b, c, d) => {
     return params[c]
   })
 }
