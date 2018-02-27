@@ -27,7 +27,7 @@ const translate = function (getWord, strs, ...params) {
     return map(value, function (e) {
       const match = regx2.exec(e)
       if (match) {
-        return params[match[match.lengh - 1]]
+        return params[match[match.length - 1]]
       }
       return e
     })
