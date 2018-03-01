@@ -15,6 +15,7 @@
     "@babel/preset-env": "^7.0.0-beta.40",
     "@otris/jsdoc-tsd": "^0.8.6",
     "babel-loader": "^8.0.0-beta.0",
+    "babel-plugin-transform-es2015-constants": "^6.1.4",
     "lodash": "^4.17.5",
     "webpack": "^3.11.0"
   }
