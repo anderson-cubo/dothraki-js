@@ -1,4 +1,4 @@
-let config = {
+var config = {
   language: 'PT_BR',
   use_array_to_render: true,
   _ENABLE_WARNINGS: true,
@@ -7,7 +7,7 @@ let config = {
   }
 }
 
-let dictionaryWithoutTranslation = {}
+var dictionaryWithoutTranslation = {}
 
 export const getDictionaryWithoutTranslation = () => dictionaryWithoutTranslation
 /**
@@ -23,7 +23,7 @@ export const setDictionary = (lang, data) => {
 
 /**
  * Search at the dictionary
- * @param {string} lang Language of the dictionary.
+ * @param {string} language Language of the dictionary.
  * @param {string} word word that`s being searched.
  * @returns {string} translation from dictionary.
  */
