@@ -16,7 +16,7 @@ const regx2 = /(\{\{([\d]*[\d])\}\})/g
 const translate = function (getWord, strs, ...params) {
   const dictionaryWord = strs.map((t, i) => {
     const joiner = params[i] ? '{{' + i + '}}' : ''
-    return (t.trim() + ' ' + joiner).trim()
+    return (String(t).trim() + ' ' + joiner).trim()
   })
 
   const dictionaryWordTemplate = dictionaryWord.join(' ').trim()
