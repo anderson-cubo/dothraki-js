@@ -1,6 +1,6 @@
 {
   "name": "dothraki-js",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -13,8 +13,10 @@
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^6.4.1",
-    "babel-preset-es2015": "^6.24.1",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "lodash": "^4.17.5",
     "webpack": "^3.11.0"
   }
