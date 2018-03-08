@@ -1,16 +1,19 @@
-module.exports = {
-  entry: './index.js',
+const config = {
+  entry: {
+    main: [
+      './src/index.js'
+    ]
+  },
   output: {
-    filename: 'dist/index.js',
+    filename: './dist/index.js',
     libraryTarget: 'commonjs2'
   },
   module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: 'babel-loader'
-      }
-    ]
+    rules: [{
+      test: /\.(js|jsx)$/,
+      loader: 'babel-loader'
+    }]
   }
 }
+
+module.exports = config
