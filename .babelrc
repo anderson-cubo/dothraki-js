@@ -1,6 +1,6 @@
 {
   "presets": ["env", "es2017", "stage-0"],
   "plugins": [
-    "add-module-exports"
+    "rewire-exports"
   ]
 }
