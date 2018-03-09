@@ -1,4 +1,4 @@
-var config = {
+let config = {
   language: 'PT_BR',
   use_array_to_render: true,
   _ENABLE_WARNINGS: true,
@@ -7,7 +7,7 @@ var config = {
   }
 }
 
-var dictionaryWithoutTranslation = {}
+let dictionaryWithoutTranslation = {}
 
 export const getDictionaryWithoutTranslation = () => dictionaryWithoutTranslation
 /**

@@ -1,6 +1,4 @@
 {
-  "presets": ["env", "es2017", "stage-0"],
-  "plugins": [
-    "rewire-exports"
-  ]
+  "presets": ["env"],
+  "plugins": ["transform-es2015-constants", "transform-es2015-block-scoping"]
 }
