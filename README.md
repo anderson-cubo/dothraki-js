@@ -27,7 +27,7 @@ import { settings } from 'dothraki-js'
 settings.set('language', 'PT_BR')
 ```
 
-## Getting words that`s not being translated
+## Getting words that are not being translated
 
 ```js
 import { settings } from 'dothraki-js'
