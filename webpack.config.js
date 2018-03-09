@@ -1,7 +1,7 @@
 const config = {
   entry: {
     main: [
-      './src/index.js'
+      './index.js'
     ]
   },
   output: {
