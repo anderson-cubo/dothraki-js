@@ -1,4 +1,9 @@
 {
-  "presets": ["env"],
-  "plugins": ["transform-es2015-constants", "transform-es2015-block-scoping"]
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "plugins": [
+    "transform-es2015-constants",
+    "@babel/plugin-transform-block-scoping"
+  ]
 }
